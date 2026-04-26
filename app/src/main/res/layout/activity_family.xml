@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/tvMyInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- 부모용: 가족그룹 만들기 + 자녀 초대 -->
+    <LinearLayout
+        android:id="@+id/layoutParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/btnCreateFamily"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="가족 그룹 만들기"
+            android:layout_marginBottom="16dp"/>
+
+        <EditText
+            android:id="@+id/etChildId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="자녀 아이디 입력"
+            android:layout_marginBottom="8dp"/>
+
+        <Button
+            android:id="@+id/btnInviteChild"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="자녀에게 연동 요청 보내기"/>
+    </LinearLayout>
+
+    <!-- 자녀용: 받은 요청 확인 -->
+    <LinearLayout
+        android:id="@+id/layoutChild"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvInvitation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="연동 요청 없음"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:id="@+id/btnAccept"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="연동 수락"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvFamilyId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:textSize="14sp"/>
+</LinearLayout>
